@@ -14,8 +14,17 @@ python runner.py
 
 ## Controls
 
-- **SPACE** — jump
+- **SPACE** — start / jump
+- **P** — pause / resume
 - After game over, press **SPACE** to restart
+
+## Features
+
+- **High score** persisted to `highscore.txt` between runs.
+- **Sound effects** — jump chirp and crash noise, synthesized in code
+  (no audio files needed); silently disabled if no audio device is present.
+- **Difficulty scaling:** every 5 dodged obstacles, obstacles get faster
+  *and* spawn more frequently. The hitbox is slightly forgiving.
 
 ## How it works
 
@@ -31,4 +40,4 @@ python runner.py
 
 - Replace the `draw.rect()` blocks with sprites via
   `pygame.image.load('your_image.png')` and `screen.blit()`.
-- Add a high-score file, sound effects, or scrolling background layers.
+- Add scrolling background layers (parallax).
